@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fondo: #f3f6f9;
+  --color-superficie: #ffffff;
+  --color-tinta: #14213d;
+  --color-suave: #55657a;
+  --color-linea: #d9e1ea;
+  --color-acento: #2f5bea;
+  --color-acento-oscuro: #2447c4;
+
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-texto: "Newsreader", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-tinta);
+  font-family: var(--font-texto);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Punto de datos que recorre el pipeline del Hero */
+.flujo-punto {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-top: -0.25rem;
+  border-radius: 9999px;
+  background: var(--color-acento);
+  animation: flujo 7s linear infinite;
+  animation-fill-mode: backwards;
+}
+
+@keyframes flujo {
+  0%   { left: 0; opacity: 0; }
+  5%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { left: calc(100% - 0.5rem); opacity: 0; }
+  100% { left: calc(100% - 0.5rem); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .flujo-punto { animation: none; left: 50%; opacity: 1; }
+}
