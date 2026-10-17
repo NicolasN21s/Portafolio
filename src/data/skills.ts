@@ -1,6 +1,6 @@
 import type { IconType } from 'react-icons'
 import { FaAws, FaCode, FaDatabase, FaJava, FaJs, FaReact } from 'react-icons/fa'
-import { SiAngular, SiGooglecloud, SiPython } from 'react-icons/si'
+import { SiAngular, SiApachespark, SiGooglecloud, SiPython } from 'react-icons/si'
 
 type Grupo = {
   nombre: string
@@ -31,6 +31,11 @@ export const grupos: Grupo[] = [
     nombre: 'Bases de datos',
     descripcion: 'Consulta y gestión de información en bases de datos relacionales.',
     items: [{ nombre: 'SQL', Icono: FaDatabase }],
+  },
+  {
+    nombre: 'Procesamiento de datos',
+    descripcion: 'Procesamiento distribuido de grandes volúmenes de datos.',
+    items: [{ nombre: 'PySpark', Icono: SiApachespark }],
   },
   {
     nombre: 'Nube',
