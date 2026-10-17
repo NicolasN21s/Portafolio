@@ -69,13 +69,13 @@ export default function Skills() {
           role="region"
           aria-label="Carrusel de habilidades por categoría"
           tabIndex={0}
-          className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex w-full min-w-0 items-start snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {grupos.map((grupo, indice) => (
             <article
               key={grupo.nombre}
               data-habilidad
-              className="w-[min(86%,22rem)] shrink-0 snap-start rounded-2xl border border-linea p-5 sm:w-[min(72%,24rem)] lg:w-[calc(50%-0.625rem)] lg:p-6"
+              className="h-fit w-[min(86%,22rem)] shrink-0 snap-start rounded-2xl border border-linea p-5 sm:w-[min(72%,24rem)] lg:w-[calc(50%-0.625rem)] lg:p-6"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>

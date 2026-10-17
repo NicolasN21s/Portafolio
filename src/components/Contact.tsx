@@ -18,9 +18,9 @@ export default function Contact() {
 
   return (
     <section id={contacto.id} className="border-t border-white/10 bg-tinta text-white">
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[14rem_1fr] md:gap-12 md:py-24">
+      <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-[14rem_minmax(0,1fr)] md:gap-12 md:py-24">
         <div className="font-display text-3xl font-bold tracking-tight">Contacto</div>
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(20rem,1.15fr)] lg:gap-16">
+        <div className="grid min-w-0 gap-12 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-16">
           <div>
             <p className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               Hablemos.
