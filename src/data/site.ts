@@ -7,7 +7,8 @@ presentacion: [
   ],
 
   foto: '/FotoNicolas.JPG',
-  cv: '/CV_NicolasNeira.pdf',
+  cvEspanol: '/HDV_NicolasNeira.pdf',
+  cvIngles: '/Nicolás_Neira_CV.pdf',
 }
 
 // Secciones del menú.

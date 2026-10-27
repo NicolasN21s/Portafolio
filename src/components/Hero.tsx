@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Download, Mail } from 'lucide-react'
+import { ChevronDown, Download, Mail } from 'lucide-react'
 import { sitio } from '../data/site'
 
 const etapas = [
@@ -24,14 +24,33 @@ export default function Hero() {
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4 font-display font-semibold">
-            <a
-              href={sitio.cv}
-              download
-              className="inline-flex items-center gap-2 rounded-full bg-acento px-6 py-3 text-white transition-colors hover:bg-acento-oscuro"
-            >
-              <Download size={18} aria-hidden="true" />
-              Descargar CV
-            </a>
+            <details className="group relative">
+              <summary className="inline-flex cursor-pointer list-none items-center gap-2 rounded-full bg-acento px-6 py-3 text-white transition-colors hover:bg-acento-oscuro [&::-webkit-details-marker]:hidden">
+                <Download size={18} aria-hidden="true" />
+                Descargar CV
+                <ChevronDown
+                  size={16}
+                  aria-hidden="true"
+                  className="transition-transform group-open:rotate-180"
+                />
+              </summary>
+              <div className="absolute left-0 top-full z-20 mt-2 min-w-48 rounded-2xl border border-linea bg-superficie p-2 text-left text-tinta shadow-xl">
+                <a
+                  href={sitio.cvEspanol}
+                  download
+                  className="block rounded-xl px-4 py-3 transition-colors hover:bg-fondo"
+                >
+                  Español
+                </a>
+                <a
+                  href={sitio.cvIngles}
+                  download
+                  className="block rounded-xl px-4 py-3 transition-colors hover:bg-fondo"
+                >
+                  English
+                </a>
+              </div>
+            </details>
             <a
               href="#contacto"
               className="inline-flex items-center gap-2 rounded-full border border-tinta/20 px-6 py-3 transition-colors hover:border-tinta"
