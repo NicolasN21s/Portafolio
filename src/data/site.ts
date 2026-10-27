@@ -7,7 +7,7 @@ presentacion: [
   ],
 
   foto: '/FotoNicolas.JPG',
-  cv: '/HDV_NicolasN.pdf', // copia tu PDF en la carpeta public/ con este nombre
+  cv: '/CV_NicolasNeira.pdf',
 }
 
 // Secciones del menú.
