@@ -47,7 +47,7 @@ export default function Hero() {
                   download
                   className="block rounded-xl px-4 py-3 transition-colors hover:bg-fondo"
                 >
-                  English
+                  Inglés
                 </a>
               </div>
             </details>
