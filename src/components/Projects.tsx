@@ -10,7 +10,7 @@ export default function Projects() {
             key={proyecto.nombre}
             className="grid items-center gap-6 border-b border-linea pb-14 last:border-b-0 last:pb-0 lg:grid-cols-2 lg:gap-10"
           >
-            {'imagenes' in proyecto ? (
+            {'imagenes' in proyecto && proyecto.imagenes ? (
               <div
                 className={`relative aspect-[16/10] w-full rounded-2xl border border-linea bg-[#e8eef8] p-4 sm:p-6 ${
                   indice % 2 === 1 ? 'lg:order-2' : ''
