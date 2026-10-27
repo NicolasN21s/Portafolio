@@ -17,18 +17,19 @@ export default function Projects() {
                 }`}
                 aria-label="Collage de imágenes del proyecto"
               >
-                <img
-                  src={proyecto.imagenes[0].src}
-                  alt={proyecto.imagenes[0].alt}
-                  loading="lazy"
-                  className="absolute left-4 top-5 h-[72%] w-[72%] rounded-xl border border-white/80 bg-white object-cover shadow-xl sm:left-6 sm:top-6"
-                />
-                <img
-                  src={proyecto.imagenes[1].src}
-                  alt={proyecto.imagenes[1].alt}
-                  loading="lazy"
-                  className="absolute bottom-5 right-4 h-[48%] w-[48%] rounded-xl border-4 border-white bg-white object-cover shadow-xl sm:bottom-6 sm:right-6"
-                />
+                {proyecto.imagenes.map((imagen, imagenIndice) => (
+                  <img
+                    key={imagen.src}
+                    src={imagen.src}
+                    alt={imagen.alt}
+                    loading="lazy"
+                    className={
+                      imagenIndice === 0
+                        ? 'absolute left-4 top-5 h-[72%] w-[72%] rounded-xl border border-white/80 bg-white object-cover shadow-xl sm:left-6 sm:top-6'
+                        : 'absolute bottom-5 right-4 h-[48%] w-[48%] rounded-xl border-4 border-white bg-white object-cover shadow-xl sm:bottom-6 sm:right-6'
+                    }
+                  />
+                ))}
               </div>
             ) : (
               <img
