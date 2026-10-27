@@ -1,5 +1,18 @@
 export const proyectos = [
   {
+    nombre: 'Bogotá en Movimiento',
+    imagenes: [
+      { src: '/dashboard.png', alt: 'Dashboard de aforos de Bogotá en Movimiento' },
+      { src: '/BEnMovimiento.jpg', alt: 'Vista del proyecto Bogotá en Movimiento' },
+    ],
+    categoria: 'Datos abiertos · ETL · Streamlit',
+    contribucion: 'Construí el flujo ETL, el catálogo geográfico y el dashboard interactivo.',
+    nota: 'Si el dashboard está inactivo, pulsa «Wake up» para reactivarlo.',
+    descripcion:
+      'Proyecto de datos abiertos para explorar aforos oficiales de bicicletas y vehículos en Bogotá. Los ZIP del visor se descargan manualmente; mis scripts extraen los Excel de volumen, detectan duplicados, normalizan categorías y fechas, y generan un dataset común con trazabilidad al archivo fuente. Después produzco resúmenes y un catálogo geográfico de nodos, y los muestro en un dashboard de Streamlit con filtros de nodo, modalidad y fecha. También incluí una opción para publicar un snapshot comprimido y cargar datos en PostgreSQL. El alcance corresponde a los estudios seleccionados: el dashboard comunica los faltantes y evita presentar los resultados como una medida completa de toda la movilidad de Bogotá.',
+    enlace: 'https://bogota-en-movimiento-ggbjhvvrzhma5ykpbx8xjv.streamlit.app/',
+  },
+  {
     nombre: 'DataRift',
     imagen: '/DataRift1.jpg',
     alt: 'Interfaz de la plataforma DataRift',
